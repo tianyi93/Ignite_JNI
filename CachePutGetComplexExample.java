@@ -40,6 +40,7 @@ public class CachePutGetComplexExample {
         System.loadLibrary("org_apache_ignite_examples_datagrid_CachePutGetComplexExample");
     }
     private native Person cppget(IgniteCache<Integer, Person> cache, Integer index);
+    private native double avg(IgniteCache<Integer, Person> cache);
     /** Cache name. */
     private static final String CACHE_NAME = CachePutGetComplexExample.class.getSimpleName();
 
@@ -72,12 +73,17 @@ public class CachePutGetComplexExample {
         final int keyCnt = 20;
         // Store keys in cache.
         cache.put(0, new Person("a",100));
+        cache.put(1, new Person("b", 300));
         System.out.println(">>> Stored values in cache.");
 
         System.out.println(">>> Following statement are from cpp file");
 
         Person cppresult = new CachePutGetComplexExample().cppget(cache, 0);
         System.out.println("Cppresult: Got key=" + 0 + " " + cppresult.getPersonInfo());
+
+        //following are the code getting average of balance
+        double AverageBalance = new CachePutGetComplexExample().avg(cache);
+        System.out.println("average balance = " + AverageBalance);
     }
     /**
      * Execute bulk {@code putAll(...)} and {@code getAll(...)} operations.

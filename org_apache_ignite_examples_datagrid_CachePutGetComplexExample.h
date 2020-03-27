@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jobject JNICALL Java_org_apache_ignite_examples_datagrid_CachePutGetComplexExample_cppget
   (JNIEnv *, jobject, jobject, jobject);
 
+/*
+ * Class:     org_apache_ignite_examples_datagrid_CachePutGetComplexExample
+ * Method:    avg
+ * Signature: (Lorg/apache/ignite/IgniteCache;)D
+ */
+JNIEXPORT jdouble JNICALL Java_org_apache_ignite_examples_datagrid_CachePutGetComplexExample_avg
+  (JNIEnv *, jobject, jobject);
+
 #ifdef __cplusplus
 }
 #endif
