@@ -41,6 +41,7 @@ public class CachePutGetComplexExample {
     }
     private native Person cppget(IgniteCache<Integer, Person> cache, Integer index);
     private native double avg(IgniteCache<Integer, Person> cache);
+    private native int zipcount(IgniteCache<Integer, Person> cache, int zipcode, int size);
     /** Cache name. */
     private static final String CACHE_NAME = CachePutGetComplexExample.class.getSimpleName();
 
@@ -72,8 +73,8 @@ public class CachePutGetComplexExample {
         System.out.println(">>> Cache put-get example started.");
         final int keyCnt = 20;
         // Store keys in cache.
-        cache.put(0, new Person("a",100));
-        cache.put(1, new Person("b", 300));
+        cache.put(0, new Person("a",100, 89169));
+        cache.put(1, new Person("b", 300, 89169));
         System.out.println(">>> Stored values in cache.");
 
         System.out.println(">>> Following statement are from cpp file");
@@ -84,6 +85,9 @@ public class CachePutGetComplexExample {
         //following are the code getting average of balance
         double AverageBalance = new CachePutGetComplexExample().avg(cache);
         System.out.println("average balance = " + AverageBalance);
+
+        int NumZip = new CachePutGetComplexExample().zipcount(cache, 89169, cache.size());
+        System.out.println("num of person in 89169 = " + NumZip);
     }
     /**
      * Execute bulk {@code putAll(...)} and {@code getAll(...)} operations.

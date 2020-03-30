@@ -23,6 +23,14 @@ JNIEXPORT jobject JNICALL Java_org_apache_ignite_examples_datagrid_CachePutGetCo
 JNIEXPORT jdouble JNICALL Java_org_apache_ignite_examples_datagrid_CachePutGetComplexExample_avg
   (JNIEnv *, jobject, jobject);
 
+/*
+ * Class:     org_apache_ignite_examples_datagrid_CachePutGetComplexExample
+ * Method:    zipcount
+ * Signature: (Lorg/apache/ignite/IgniteCache;II)I
+ */
+JNIEXPORT jint JNICALL Java_org_apache_ignite_examples_datagrid_CachePutGetComplexExample_zipcount
+  (JNIEnv *, jobject, jobject, jint, jint);
+
 #ifdef __cplusplus
 }
 #endif
