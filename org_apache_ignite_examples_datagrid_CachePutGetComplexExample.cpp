@@ -5,21 +5,21 @@
 #include <string>
 class Person {
 public:
-	Person(jstring name, jdouble balance) {
+	Person(std::string name, double balance) {
 		this->name = name;
 		this->balance = balance;
 	}
-	jdouble getBalance() {
+	double getBalance() {
 		return balance;
 	}
 
 private:
-	jstring name;
-	jdouble balance;
+	std::string name;
+	double balance;
 };
 
-jdouble average(std::vector<Person> vp) {
-	jdouble total = 0;
+double average(std::vector<Person> vp) {
+	double total = 0;
 	for (auto p : vp) {
 		total += p.getBalance();
 	}
@@ -74,13 +74,15 @@ JNIEXPORT jdouble JNICALL Java_org_apache_ignite_examples_datagrid_CachePutGetCo
 	jfieldID fidbalance = env->GetFieldID(PersonClass, "balance", "D");
 	
 	jstring name0 = (jstring)env->GetObjectField(Person0, fidname);
+	std::string name0s = env->GetStringUTFChars(name0, NULL);
 	jdouble balance0 = env->GetDoubleField(Person0, fidbalance);
 
 	jstring name1 = (jstring)env->GetObjectField(Person1, fidname);
+	std::string name1s = env->GetStringUTFChars(name1, NULL);
 	jdouble balance1 = env->GetDoubleField(Person1, fidbalance);
 	
-	Person p0(name0, balance0);
-	Person p1(name1, balance1);
+	Person p0(name0s, balance0);
+	Person p1(name1s, balance1);
 	std::vector<Person> vp{ p0, p1 };
 
 	return average(vp);
