@@ -75,6 +75,7 @@ public class CachePutGetComplexExample {
         // Store keys in cache.
         cache.put(0, new Person("a",100, 89169));
         cache.put(1, new Person("b", 300, 89169));
+        cache.put(2, new Person("c", 500, 70820));
         System.out.println(">>> Stored values in cache.");
 
         System.out.println(">>> Following statement are from cpp file");
@@ -88,6 +89,9 @@ public class CachePutGetComplexExample {
 
         int NumZip = new CachePutGetComplexExample().zipcount(cache, 89169, cache.size());
         System.out.println("num of person in 89169 = " + NumZip);
+
+        int NumZip70820 = new CachePutGetComplexExample().zipcount(cache, 70820, cache.size());
+        System.out.println("num of person in 70820 = " + NumZip70820);
     }
     /**
      * Execute bulk {@code putAll(...)} and {@code getAll(...)} operations.
