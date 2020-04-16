@@ -28,38 +28,26 @@ import java.util.List;
 public class OdbcJavaServerExample {
 
     public static void main(String[] args) throws IgniteException, InterruptedException, Exception  {
-        //Ignite ignite = Ignition.start("C:/Users/harte/Desktop/work/apache-ignite-2.8.0-bin/platforms/cpp/examples/odbc-example/config/example-odbc.xml");
         IgniteConfiguration igniteConfiguration = new IgniteConfiguration();
         BinaryConfiguration bCfg = new BinaryConfiguration();
         bCfg.setCompactFooter(false);
         bCfg.setNameMapper(new BinaryBasicNameMapper(true));
         bCfg.setIdMapper(new BinaryBasicIdMapper(true));
-        //bCfg.setClassNames(Collections.singleton("org.apache.ignite.examples.datagrid.CrossClass"));
         igniteConfiguration.setBinaryConfiguration(bCfg);
 
-        CacheConfiguration cacheCfg = new CacheConfiguration("Person");
-        QueryEntity entity = new QueryEntity();
-        entity.setKeyType("java.lang.Long");
-        entity.setValueType("Person");
-        LinkedHashMap<String,String> map = new LinkedHashMap<String, String>();
-        map.put("orgId", "java.lang.Long");
-        map.put("firstName", "java.lang.String");
-        map.put("lastName", "java.lang.String");
-        map.put("Resume", "java.lang.String");
-        map.put("Salary", "java.lang.double");
-        entity.setFields(map);
-        entity.setIndexes(Collections.singletonList(new QueryIndex("orgId")));
-        List<QueryEntity> queryEntities = new ArrayList<>();
-        queryEntities.add(entity);
-        cacheCfg.setQueryEntities(queryEntities);
+        CacheConfiguration cacheCfg = new CacheConfiguration("PersonCache");
+        cacheCfg.setIndexedTypes(java.lang.Long.class, Person.class);
         igniteConfiguration.setCacheConfiguration(cacheCfg);
+
         Ignite ignite = Ignition.start(igniteConfiguration);
-        IgniteCache cache = ignite.getOrCreateCache("Person");
+        IgniteCache cache = ignite.getOrCreateCache("PersonCache");
 
         Person p = new Person((long)1,"Joe", "Doe from java");
+        Person p0 = new Person((long)2,"M", "2 from java");
         p.resume = "ms";
         p.salary = 2000;
         Long index =1L;
         cache.put(index,p);
+        cache.put(0L, p0);
     }
 }
