@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a53de6cf-118b-4879-af98-37301a8675cb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1arKsoC2vtfo8JQPCeDBNiV7Cwx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="passvecjni" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;C:\Users\harte\Desktop\Ignite_JNI\JNIPassingVec\src&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="passvecjni" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="passvecjni" />
+      <module name="JNIPassingVec" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;C:\Users\harte\Desktop\Ignite_JNI\JNIPassingVec\src&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a53de6cf-118b-4879-af98-37301a8675cb" name="Default Changelist" comment="" />
+      <created>1587488482664</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587488482664</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="144" key="#Project_Structure" timestamp="1587488492886">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="144" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1587488492886" />
+    <state x="282" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587488929724">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="282" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587488929724" />
+    <state x="511" y="257" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587488600338">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="257" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1587488600338" />
+    <state width="1123" height="170" key="GridCell.Tab.0.bottom" timestamp="1587495883736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1123" height="170" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587495883736" />
+    <state width="1123" height="170" key="GridCell.Tab.0.center" timestamp="1587495883736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1123" height="170" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587495883736" />
+    <state width="1123" height="170" key="GridCell.Tab.0.left" timestamp="1587495883736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1123" height="170" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587495883736" />
+    <state width="1123" height="170" key="GridCell.Tab.0.right" timestamp="1587495883736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1123" height="170" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587495883736" />
+    <state x="521" y="38" key="SettingsEditor" timestamp="1587488992844">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="521" y="38" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587488992844" />
+  </component>
+</project>
