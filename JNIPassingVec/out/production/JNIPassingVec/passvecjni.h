@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT void JNICALL Java_passvecjni_passvec
   (JNIEnv *, jobject, jobject, jint);
 
+/*
+ * Class:     passvecjni
+ * Method:    passmatrix
+ * Signature: (Ljava/util/ArrayList;II)V
+ */
+JNIEXPORT void JNICALL Java_passvecjni_passmatrix
+  (JNIEnv *, jobject, jobject, jint, jint);
+
 #ifdef __cplusplus
 }
 #endif
